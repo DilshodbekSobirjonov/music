@@ -1,0 +1,93 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.container {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: url('https://img5.goodfon.ru/wallpaper/nbig/f/c8/zima-sneg-priroda-les-2.jpg');
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+}
+
+.box{
+	position: relative;
+	min-width: 60%;
+	height: 50vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.box > .content-box{
+	position: relative;
+	width: 100%;
+	height: 80%;
+	backdrop-filter: blur(5px);
+	box-shadow: 5px 5px 20px black;
+	border-radius: 10px;
+	display: flex;
+}
+
+.img{
+	width: 40%;
+	height: 100%;
+	border: 2px solid black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.img > img {
+	width: 350px;
+	height: 350px;
+}
+
+
+.box > .vis-box{
+	min-width: 100%;
+	height: 20%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+	border-radius: 10px;
+	border-radius: 10px;
+	padding: 15px;
+	background: linear-gradient(0deg, rgba(235,235,235,1) 30%, rgba(253,187,45,0) 100%);
+
+}
+
+.box > .vis-box > .vis{
+	position: absolute;
+	bottom: -5px;
+	width: 20px;
+	height: 50px;
+	background: rgba(255, 255, 255, .9);
+	border-top-left-radius: 100px;
+	border-top-right-radius: 100px;
+	margin: 4px;
+	margin-left: calc(var(--i)*50px + var(--i)*8px);
+	animation: visual 1s linear infinite;
+	animation-delay: calc(var(--i)*1s/10);
+	animation-direction: alternate;
+	box-shadow: 5px 5px 5px red,
+				-5px -5px 5px #00ccff,
+				5px 5px 10px black;
+}
+
+@keyframes visual {
+	0%{
+		height: 50px;
+	}
+	100%{
+		height: 300px;
+	}
+}
